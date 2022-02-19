@@ -8,6 +8,7 @@ const (
 	Complete   TaskStatus = 3
 )
 
+// Задача
 type Task struct {
 	Name   string
 	Status TaskStatus
