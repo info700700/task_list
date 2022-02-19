@@ -1,5 +1,6 @@
 package work
 
+// статус задачи
 type TaskStatus uint8
 
 const (
@@ -8,7 +9,7 @@ const (
 	Complete   TaskStatus = 3
 )
 
-// Задача
+// задача
 type Task struct {
 	Name   string
 	Status TaskStatus
