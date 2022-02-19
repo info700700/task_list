@@ -4,10 +4,10 @@ package work
 type TaskStatus uint8
 
 const (
-	Wait       TaskStatus = 0 // в ожидании. Задачу нужно сделать когда-нибудь, но сейчас на эту задачу нет времени (ресурсов).
-	Planned    TaskStatus = 1
-	InProgress TaskStatus = 2 // в работе
-	Complete   TaskStatus = 3
+	Wait       TaskStatus = 0 // В ожидании. Задачу нужно сделать когда-нибудь, но сейчас на эту задачу нет времени (ресурсов).
+	Planned    TaskStatus = 1 // Запланировано. На данную задачу есть время (ресурсы). Задача должны быть сделана в ближайшее время. (Например, в ближайшие 2 недели.)
+	InProgress TaskStatus = 2 // В работе.
+	Complete   TaskStatus = 3 // Выполнено.
 )
 
 // задача
