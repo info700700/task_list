@@ -1,5 +1,7 @@
 package work
 
+type TaskId uint32
+
 // статус задачи
 type TaskStatus uint8
 
@@ -13,6 +15,8 @@ const (
 
 // задача
 type Task struct {
-	Name   string
-	Status TaskStatus
+	Id          TaskId
+	Name        string
+	Description string
+	Status      TaskStatus
 }
