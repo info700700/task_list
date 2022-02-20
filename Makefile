@@ -1,10 +1,10 @@
 .PHONY: build
 build:
-	go build -o task-server
+	go build -o bin/task-server
 
 .PHONY: start
 start:
-	./task-server
+	./bin/task-server
 
 .PHONY: build_image
 build_image:
