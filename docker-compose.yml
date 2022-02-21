@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - 80:80
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
