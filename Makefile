@@ -22,3 +22,18 @@ start_server_in_docker:
 .PHONY: stop_server_in_docker
 stop_server_in_docker:
 	@docker stop task-server
+
+
+###############################################################################
+# Docker Compose
+###############################################################################
+
+# "dc" означает "Docker Compose"
+
+.PHONY: dc_build
+dc_build:
+	docker-compose build
+
+.PHONY: dc_start
+dc_start:
+	docker-compose up -d
