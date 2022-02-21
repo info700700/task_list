@@ -37,3 +37,7 @@ dc_build:
 .PHONY: dc_start
 dc_start:
 	docker-compose --project-name work up --detach
+
+.PHONY: dc_stop
+dc_stop:
+	docker-compose --project-name work down
