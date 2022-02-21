@@ -16,10 +16,10 @@ services:
   mysql:
     image: mysql:5.7
     volumes:
-      - work-mysql-data:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: work
 
 volumes:
-  work-mysql-data:
+  mysql-data:
