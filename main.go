@@ -17,7 +17,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":80", nil))
 }
 
-//go:embed index.html
+//go:embed static/index.html
 var mainPage string
 
 func handleMain(w http.ResponseWriter, r *http.Request) {
