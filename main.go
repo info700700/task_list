@@ -5,9 +5,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/info700700/task_list/handler"
 )
 
 func main() {
+	handler.RegHandlers()
+
 	http.HandleFunc("/", handleMain)
 
 	log.Fatal(http.ListenAndServe(":80", nil))
