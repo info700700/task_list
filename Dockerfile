@@ -12,8 +12,9 @@ COPY go.mod ./
 RUN go mod download
 RUN go mod verify
 
-COPY index.html ./
 COPY *.go ./
+COPY work work
+COPY handler handler
 
 RUN go build -o /task-server
 
@@ -25,6 +26,7 @@ FROM gcr.io/distroless/base-debian10
 
 WORKDIR /
 
+COPY static static
 COPY --from=build /task-server /task-server
 
 EXPOSE 80
