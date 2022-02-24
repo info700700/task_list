@@ -16,7 +16,7 @@ COPY *.go ./
 COPY work work
 COPY handler handler
 
-RUN go build -o /task-server
+RUN go build -o /work-server
 
 
 ##
@@ -27,10 +27,10 @@ FROM gcr.io/distroless/base-debian10
 WORKDIR /
 
 COPY static static
-COPY --from=build /task-server /task-server
+COPY --from=build /work-server /work-server
 
 EXPOSE 80
 
 USER nonroot:nonroot
 
-ENTRYPOINT ["/task-server"]
+ENTRYPOINT ["/work-server"]
