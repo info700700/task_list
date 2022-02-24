@@ -32,7 +32,7 @@ stop_server_in_docker:
 
 .PHONY: dc_build
 dc_build:
-	docker-compose build
+	docker-compose --project-name work build
 
 .PHONY: dc_start
 dc_start:
