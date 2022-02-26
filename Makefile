@@ -41,3 +41,8 @@ dc_start:
 .PHONY: dc_stop
 dc_stop:
 	docker-compose --project-name work down
+
+# update
+.PHONY: u
+u: dc_stop dc_build
+	make dc_start
