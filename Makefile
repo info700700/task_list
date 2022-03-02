@@ -1,37 +1,36 @@
-.PHONY: build
-build:
-	docker-compose --project-name work build
-
-.PHONY: start
-start:
-	docker-compose --project-name work up --detach
-
-.PHONY: stop
-stop:
-	docker-compose --project-name work down
-
-# update
-.PHONY: u
-u: stop build
-	make start
-
-
 ###############################################################################
 # Old code
 ###############################################################################
 
-#.PHONY: build
-#build:
-#	go build -o bin/task-server
+.PHONY: build
+build:
+	go build -o bin/task-server
 
-#.PHONY: start_server
-#start:
-#	./bin/task-server
-
+.PHONY: start
+start:
+	./bin/task-server
 
 ###############################################################################
 # Docker (old)
 ###############################################################################
+
+.PHONY: docker_build
+docker_build:
+	docker-compose --project-name work build
+
+.PHONY: docker_start
+docker_start:
+	docker-compose --project-name work up --detach
+
+.PHONY: docker_stop
+docker_stop:
+	docker-compose --project-name work down
+
+# update
+#.PHONY: u
+#u: stop build
+#	make start
+
 
 #.PHONY: build_image
 #build_image:
