@@ -3,6 +3,7 @@ version: "3.7"
 services:
   app:
     image: golang:1.17-buster
+    command: sh -c "go build -o bin/task-server"
     ports:
       - 80:80
     working_dir: /app

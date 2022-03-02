@@ -1,14 +1,18 @@
+.PHONY: start_dev
+start_dev:
+	docker compose --file docker-compose-dev.yml --project-name work up --detach
+
 ###############################################################################
 # Old code
 ###############################################################################
 
-.PHONY: build
-build:
-	go build -o bin/task-server
+#.PHONY: build
+#build:
+#	go build -o bin/task-server
 
-.PHONY: start
-start:
-	./bin/task-server
+#.PHONY: start
+#start:
+#	./bin/task-server
 
 ###############################################################################
 # Docker (old)
